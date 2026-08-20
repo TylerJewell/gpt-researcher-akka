@@ -41,8 +41,8 @@ Full method and the numbers that did *not* make this list: [`bench/REPORT.md`](h
 ## What it took to build
 
 ⏱️ **0.5 hours** from the first command to the published repository, **0.5** of them active<br>
-💬 **294** exchanges with the model<br>
-✍️ **144,190** tokens written by the model, **47,393,420** counting everything sent and re-sent<br>
+💬 **326** exchanges with the model<br>
+✍️ **154,970** tokens written by the model, **55,476,207** counting everything sent and re-sent<br>
 🙋 **0** questions to a human<br>
 🧪 **17** tests
 
@@ -158,6 +158,10 @@ like mistakes.
   (overlapping words, and search-result titles), not by an embedding model or a language
   model.** The source uses both; this port's own versions are swappable, deterministic, and
   do not require any external service or credentials to try.
+- **The relevance bar always applies here; in the source it has an exception.** When the
+  source has few enough pages and little enough total text for one question, it skips
+  relevance scoring entirely and uses whatever it found, unranked and unfiltered. This port
+  always scores and always applies the bar, regardless of how much was found.
 
 ## Licence
 
